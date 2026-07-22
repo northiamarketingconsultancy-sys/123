@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WingGrove Tree Care | ISA Certified Arborists in Greater Vancouver</title>
+<meta name="description" content="Certified, insured tree pruning, removal & hedge trimming in Greater Vancouver. Honest advice, safe work, spotless clean-up. Get a free quote." />
+<meta name="keywords" content="certified arborist Vancouver, tree removal Vancouver cost, leaning tree, hedge trimming Vancouver, emergency tree service Greater Vancouver, tree pruning Vancouver" />
+<meta property="og:title" content="WingGrove Tree Care | ISA Certified Arborists in Greater Vancouver" />
+<meta property="og:description" content="Certified, insured tree pruning, removal & hedge trimming. Honest advice, safe work, spotless clean-up." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --forest:#1f4d2e;
+    --forest-deep:#143620;
+    --leaf:#5a9a3f;
+    --leaf-bright:#7cb342;
+    --sage:#e8f0e3;
+    --cream:#f7faf4;
+    --ink:#1b241e;
+    --muted:#5c6b60;
+    --line:#e0e7dc;
+    --gold:#f2b705;
+    --white:#ffffff;
+    --shadow:0 10px 30px rgba(20,54,32,.10);
+    --shadow-lg:0 24px 60px rgba(20,54,32,.16);
+    --radius:16px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.12;letter-spacing:-.01em;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'Inter';font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:1rem;padding:.95rem 1.6rem;border-radius:999px;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+  .btn-primary{background:var(--leaf-bright);color:#12300c;box-shadow:0 8px 22px rgba(124,179,66,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(124,179,66,.5)}
+  .btn-ghost{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-outline{background:#fff;border-color:var(--forest);color:var(--forest)}
+  .btn-outline:hover{background:var(--forest);color:#fff}
+  .section{padding:88px 0}
+  .section-head{max-width:720px;margin:0 auto 52px;text-align:center}
+  .section-head h2{font-size:clamp(1.8rem,3.6vw,2.7rem);color:var(--forest-deep);margin:.4rem 0 .8rem}
+  .section-head p{color:var(--muted);font-size:1.08rem}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:.6rem;font-family:'Playfair Display';font-weight:700;font-size:1.32rem;color:var(--forest-deep)}
+  .brand .mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--leaf-bright),var(--forest));display:grid;place-items:center;color:#fff;font-size:1.2rem}
+  .brand-logo{height:46px;width:auto;display:block}
+  footer .brand-logo{height:54px}
+  .brand small{display:block;font-family:'Inter';font-weight:600;font-size:.62rem;letter-spacing:.22em;color:var(--leaf);text-transform:uppercase;margin-top:-2px}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-weight:500;font-size:.98rem;color:var(--ink);transition:color .2s}
+  .nav-links a:hover{color:var(--leaf)}
+  .nav-cta{display:flex;align-items:center;gap:1rem}
+  .nav-phone{font-weight:700;color:var(--forest-deep);white-space:nowrap}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;font-size:1.6rem;color:var(--forest-deep)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:620px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,#143620 0%,#1f4d2e 55%,#2c6b3d 100%);z-index:-2}
+  .hero-photo{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center;opacity:.42;z-index:-1}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,40,22,.86) 0%,rgba(15,40,22,.55) 55%,rgba(15,40,22,.25) 100%);z-index:-1}
+  .hero-inner{padding:80px 0}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.7rem);max-width:16ch;margin:.9rem 0 1.1rem;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+  .hero p.sub{font-size:1.18rem;max-width:52ch;color:rgba(255,255,255,.92)}
+  .hero .eyebrow{color:var(--leaf-bright)}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin:2rem 0 1.5rem}
+  .trust-row{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;font-weight:500;font-size:.96rem;color:rgba(255,255,255,.92)}
+  .trust-row span{display:flex;align-items:center;gap:.45rem}
+  .trust-row .chk{color:var(--leaf-bright);font-weight:800}
+  .isa-hero{display:flex;align-items:center;gap:.8rem;margin-top:1.8rem;background:rgba(255,255,255,.96);border-radius:14px;padding:.7rem .95rem;width:max-content;max-width:100%;box-shadow:var(--shadow)}
+  .isa-hero img{width:52px;height:auto}
+  .isa-hero .isa-fallback{width:46px;height:60px;border-radius:6px;background:var(--forest);color:var(--gold);font-family:'Playfair Display';font-weight:700;font-size:.6rem;display:grid;place-items:center;text-align:center;line-height:1.1;padding:4px}
+  .isa-hero div.txt{color:var(--forest-deep);font-size:.86rem;line-height:1.3}
+  .isa-hero div.txt strong{display:block;font-family:'Playfair Display';font-size:.98rem}
+
+  /* ---------- Why ---------- */
+  .why{background:var(--cream)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:transform .18s ease,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .card .ic{width:52px;height:52px;border-radius:13px;background:var(--sage);display:grid;place-items:center;margin-bottom:16px;color:var(--forest)}
+  .card h3{font-size:1.18rem;color:var(--forest-deep);margin-bottom:.5rem}
+  .card p{color:var(--muted);font-size:.98rem}
+  .reassure{margin-top:34px;background:linear-gradient(120deg,var(--forest),var(--forest-deep));color:#fff;border-radius:var(--radius);padding:38px 40px;text-align:center;box-shadow:var(--shadow)}
+  .reassure h3{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:.6rem}
+  .reassure p{color:rgba(255,255,255,.9);max-width:70ch;margin:0 auto;font-size:1.05rem}
+
+  /* ---------- Services ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .2s}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .svc-img{height:190px;background-size:cover;background-position:center;background-color:var(--forest);position:relative}
+  .svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,54,32,0) 40%,rgba(20,54,32,.35))}
+  .svc-1 .svc-img{background-image:linear-gradient(135deg,rgba(20,54,32,.15),rgba(90,154,63,.2)),url('images/service-pruning.jpg')}
+  .svc-2 .svc-img{background-image:linear-gradient(135deg,rgba(20,54,32,.15),rgba(90,154,63,.2)),url('images/service-removal.jpg')}
+  .svc-3 .svc-img{background-image:linear-gradient(135deg,rgba(20,54,32,.15),rgba(90,154,63,.2)),url('images/service-hedge.jpg')}
+  .svc-4 .svc-img{background-image:linear-gradient(135deg,rgba(20,54,32,.15),rgba(90,154,63,.2)),url('images/service-garden.jpg')}
+  .svc-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+  .svc-body h3{font-size:1.28rem;color:var(--forest-deep)}
+  .svc-body .lead{color:var(--muted);margin:.4rem 0 .9rem;font-size:.98rem}
+  .svc-body ul{list-style:none;margin-bottom:1rem}
+  .svc-body li{position:relative;padding-left:1.5rem;margin-bottom:.4rem;font-size:.95rem;color:var(--ink)}
+  .svc-body li::before{content:"✓";position:absolute;left:0;color:var(--leaf);font-weight:800}
+  .svc-price{margin-top:auto;font-size:.9rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.9rem}
+  .svc-price b{color:var(--forest-deep)}
+  .svc-link{margin-top:1rem;font-weight:600;color:var(--forest);display:inline-flex;align-items:center;gap:.35rem}
+  .svc-link:hover{color:var(--leaf)}
+  .svc-4{grid-column:1 / -1;flex-direction:row}
+  .svc-4 .svc-img{height:auto;min-height:200px;flex:0 0 40%}
+  @media(max-width:820px){.svc-4{flex-direction:column}.svc-4 .svc-img{flex:none;height:190px;width:100%}}
+
+  .estimate{margin-top:34px;background:var(--sage);border:1px solid var(--line);border-radius:var(--radius);padding:40px}
+  .estimate h3{font-size:1.5rem;color:var(--forest-deep);text-align:center}
+  .estimate .intro{text-align:center;color:var(--muted);max-width:64ch;margin:.7rem auto 1.8rem}
+  .factors{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+  .factor{background:#fff;border-radius:12px;padding:20px 16px;text-align:center}
+  .factor .fic{font-size:1.6rem;margin-bottom:.4rem}
+  .factor b{display:block;color:var(--forest-deep);font-size:.98rem;margin-bottom:.25rem}
+  .factor small{color:var(--muted);font-size:.82rem;line-height:1.35;display:block}
+  .scopeflex{margin-top:24px;background:#fff;border-left:5px solid var(--leaf-bright);border-radius:10px;padding:20px 24px;font-size:1.02rem}
+  .scopeflex b{color:var(--forest-deep)}
+  .estimate-cta{text-align:center;margin-top:26px}
+
+  /* ---------- Signs (SEO strip) ---------- */
+  .signs{background:linear-gradient(120deg,var(--forest-deep),var(--forest));color:#fff}
+  .signs .section-head h2{color:#fff}
+  .signs .section-head p{color:rgba(255,255,255,.85)}
+  .signs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .sign{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:26px 22px}
+  .sign .sic{font-size:1.9rem;margin-bottom:.6rem}
+  .sign b{display:block;font-family:'Playfair Display';font-size:1.1rem;margin-bottom:.35rem}
+  .sign p{color:rgba(255,255,255,.85);font-size:.94rem}
+  .signs-cta{text-align:center;margin-top:36px;font-size:1.1rem}
+  .signs-cta a{color:var(--leaf-bright);font-weight:700;border-bottom:2px solid var(--leaf-bright)}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--cream)}
+  .agg{text-align:center;color:var(--muted);margin-top:-30px;margin-bottom:44px;font-weight:500}
+  .agg .stars{color:var(--gold);font-size:1.2rem;letter-spacing:2px}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+  .rev .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem;margin-bottom:.9rem}
+  .rev .pull{font-family:'Playfair Display';font-size:1.22rem;color:var(--forest-deep);line-height:1.3;margin-bottom:.9rem}
+  .rev .quote{color:var(--muted);font-size:.95rem;flex:1}
+  .rev .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+  .tag{background:var(--sage);color:var(--forest);font-size:.76rem;font-weight:600;padding:.3rem .7rem;border-radius:999px}
+  .reviews-cta{text-align:center;margin-top:40px}
+
+  /* ---------- Process ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative}
+  .step{text-align:center;padding:10px}
+  .step .num{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,var(--leaf-bright),var(--forest));color:#fff;font-family:'Playfair Display';font-size:1.6rem;font-weight:700;display:grid;place-items:center;box-shadow:0 8px 20px rgba(31,77,46,.3)}
+  .step h3{font-size:1.2rem;color:var(--forest-deep);margin-bottom:.5rem}
+  .step p{color:var(--muted);font-size:.98rem;max-width:34ch;margin:0 auto}
+  .steps-close{text-align:center;margin-top:40px;font-family:'Playfair Display';font-size:1.35rem;color:var(--forest)}
+
+  /* ---------- Contact ---------- */
+  .contact{background:linear-gradient(120deg,var(--forest-deep),var(--forest));color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
+  .contact h2{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1rem}
+  .contact .sub{color:rgba(255,255,255,.9);font-size:1.08rem;max-width:46ch}
+  .contact-info{margin:2rem 0;display:flex;flex-direction:column;gap:1rem}
+  .ci{display:flex;align-items:center;gap:.85rem;font-size:1.05rem}
+  .ci .cic{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-size:1.1rem;flex:none}
+  .ci a{font-weight:600}
+  .isa-contact{display:inline-flex;align-items:center;gap:.8rem;background:rgba(255,255,255,.96);border-radius:14px;padding:.7rem 1rem;margin-top:.5rem}
+  .isa-contact img{width:46px}
+  .isa-contact .isa-fallback{width:40px;height:52px;border-radius:6px;background:var(--forest);color:var(--gold);font-family:'Playfair Display';font-weight:700;font-size:.55rem;display:grid;place-items:center;text-align:center;padding:3px}
+  .isa-contact span{color:var(--forest-deep);font-weight:600;font-size:.9rem}
+  form.quote{background:#fff;border-radius:20px;padding:34px;color:var(--ink);box-shadow:var(--shadow-lg)}
+  form.quote h3{font-size:1.4rem;color:var(--forest-deep);margin-bottom:.4rem}
+  form.quote .fnote{color:var(--muted);font-size:.9rem;margin-bottom:1.4rem}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-weight:600;font-size:.88rem;margin-bottom:.35rem;color:var(--forest-deep)}
+  .field label .req{color:#c0392b}
+  .field input,.field select,.field textarea{width:100%;padding:.8rem .9rem;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:.98rem;background:var(--cream);transition:border .2s,box-shadow .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--leaf-bright);box-shadow:0 0 0 3px rgba(124,179,66,.2);background:#fff}
+  .field textarea{resize:vertical;min-height:90px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  form.quote .btn-primary{width:100%;justify-content:center;margin-top:.4rem;font-size:1.05rem}
+  .form-reply{color:var(--muted);font-size:.82rem;text-align:center;margin-top:.9rem}
+  .form-success{display:none;background:var(--sage);border:1px solid var(--leaf);border-radius:12px;padding:16px;text-align:center;color:var(--forest-deep);font-weight:600;margin-top:1rem}
+
+  /* ---------- Footer ---------- */
+  footer{background:#0f2817;color:rgba(255,255,255,.82);padding:56px 0 30px}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:30px}
+  .foot-brand{max-width:340px}
+  .foot-brand .brand{color:#fff;margin-bottom:.8rem}
+  .foot-brand p{font-size:.94rem;color:rgba(255,255,255,.7)}
+  .foot-cred{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+  .foot-cred span{background:rgba(255,255,255,.08);border-radius:999px;padding:.3rem .8rem;font-size:.8rem;font-weight:500}
+  .foot-col h4{color:#fff;font-family:'Playfair Display';font-size:1.05rem;margin-bottom:.9rem}
+  .foot-col a,.foot-col p{display:block;font-size:.94rem;color:rgba(255,255,255,.72);margin-bottom:.5rem;transition:color .2s}
+  .foot-col a:hover{color:var(--leaf-bright)}
+  .foot-isa{display:flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.95);border-radius:12px;padding:.6rem .8rem;width:max-content}
+  .foot-isa img{width:44px}
+  .foot-isa .isa-fallback{width:38px;height:50px;border-radius:5px;background:var(--forest);color:var(--gold);font-family:'Playfair Display';font-weight:700;font-size:.52rem;display:grid;place-items:center;text-align:center;padding:3px}
+  .foot-isa span{color:var(--forest-deep);font-weight:600;font-size:.82rem}
+  .foot-bottom{text-align:center;padding-top:24px;font-size:.85rem;color:rgba(255,255,255,.55)}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:960px){
+    .cards,.factors,.signs-grid,.svc-grid,.rev-grid,.steps{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr;gap:36px}
+    .factors{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:760px){
+    .nav-links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;padding:1rem 24px 1.4rem;gap:1rem;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+    .nav-links.open{display:flex}
+    .nav-phone{display:none}
+    .hamburger{display:block}
+    .section{padding:64px 0}
+    .cards,.factors,.signs-grid,.svc-grid,.rev-grid,.steps{grid-template-columns:1fr}
+    .row2{grid-template-columns:1fr}
+    .hero{min-height:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="WingGrove Tree Care">
+      <img src="images/logo.png" alt="WingGrove Tree Care" class="brand-logo">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#why">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#signs">Tree Health</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#process">How It Works</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+16728664653" class="nav-phone">📞 (672) 866-4653</a>
+      <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-photo"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">ISA Certified Arborists · Serving Greater Vancouver</p>
+    <h1>Expert Tree Care That Protects Your Trees — and Your Property</h1>
+    <p class="sub">Certified, insured arborists for pruning, removals, and hedge trimming across Greater Vancouver. We assess what your trees actually need, explain the plan clearly, and leave your property spotless.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Get My Free Quote &amp; Consultation</a>
+      <a href="tel:+16728664653" class="btn btn-ghost">📞 Call (672) 866-4653</a>
+    </div>
+    <div class="trust-row">
+      <span><span class="chk">✔</span> ISA Certified Arborist</span>
+      <span><span class="chk">✔</span> Fully Insured</span>
+      <span><span class="chk">✔</span> Clean, On-Schedule Work</span>
+    </div>
+    <div class="isa-hero">
+      <img src="images/isa-certified-arborist.png" alt="ISA Certified Arborist" onerror="this.outerHTML='&lt;div class=\'isa-fallback\'&gt;ISA CERT. ARBORIST&lt;/div&gt;'">
+      <div class="txt"><strong>ISA Certified</strong>Verified arboricultural qualification</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why WingGrove</p>
+      <h2>Why Homeowners Trust WingGrove</h2>
+      <p>Tree work is skilled — and, done wrong, dangerous. Here's what you get when you hire certified professionals who treat your property like their own.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ic">🎓</div>
+        <h3>Certified Expertise</h3>
+        <p>Every recommendation is grounded in real arboricultural training — not guesswork. We diagnose the tree, then advise what it genuinely needs.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🦺</div>
+        <h3>Safety First, Always</h3>
+        <p>Proper rigging, protective gear, and controlled removals protect your home, your family, and our crew. No shortcuts around your property.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🛡️</div>
+        <h3>Fully Insured</h3>
+        <p>You're protected before we ever make a cut. Full liability coverage and WorkSafeBC compliance mean zero risk lands on you.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🪚</div>
+        <h3>Professional Equipment</h3>
+        <p>Well-maintained saws, rigging, and clean-up equipment let us work efficiently, safely, and tidily — then haul it all away.</p>
+      </div>
+    </div>
+    <div class="reassure">
+      <h3>We recommend what your trees need — nothing more.</h3>
+      <p>No pressure, no invented work. We take the time to explain what should be done and why, so you can make the call with confidence. And if budget is a factor, we'll prioritize the work that matters most — reducing scope where it makes sense, never compromising on quality or safety.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Services</p>
+      <h2>Our Services &amp; What Shapes Your Price</h2>
+      <p>Straight answers, no mystery. Below is what we do and the honest factors that influence what a job costs. Your exact price comes after a free on-site look — because every tree, and every yard, is different.</p>
+    </div>
+
+    <div class="svc-grid">
+      <div class="svc svc-1">
+        <div class="svc-img"></div>
+        <div class="svc-body">
+          <h3>Tree Pruning</h3>
+          <p class="lead">Healthier growth, better structure, and safer clearance around your home.</p>
+          <ul>
+            <li>Crown thinning, raising &amp; reduction</li>
+            <li>Deadwood and hazard-limb removal</li>
+            <li>Clearance from roofs, wires &amp; walkways</li>
+          </ul>
+          <div class="svc-price">Typical range: <b>from ~$300–$800+ CAD</b>, depending on size and access.</div>
+          <a href="#contact" class="svc-link">Get a Pruning Quote →</a>
+        </div>
+      </div>
+
+      <div class="svc svc-2">
+        <div class="svc-img"></div>
+        <div class="svc-body">
+          <h3>Tree Removal</h3>
+          <p class="lead">Safe, controlled removal of hazardous, dead, or unwanted trees — down to the stump.</p>
+          <ul>
+            <li>Sectional / technical felling in tight spaces</li>
+            <li>Full debris haul-away and clean-up</li>
+            <li>Optional stump grinding</li>
+          </ul>
+          <div class="svc-price">Typical range: <b>from ~$500 to $3,000+ CAD</b>, driven by height, access &amp; risk.</div>
+          <a href="#contact" class="svc-link">Get a Removal Quote →</a>
+        </div>
+      </div>
+
+      <div class="svc svc-3">
+        <div class="svc-img"></div>
+        <div class="svc-body">
+          <h3>Hedge Trimming</h3>
+          <p class="lead">Crisp, healthy hedges that frame your property instead of overrunning it.</p>
+          <ul>
+            <li>Shaping, height reduction &amp; face-trimming</li>
+            <li>Seasonal maintenance schedules</li>
+            <li>Trimmings cleared and removed</li>
+          </ul>
+          <div class="svc-price">Typical range: <b>from ~$150–$500+ CAD</b>, depending on length and height.</div>
+          <a href="#contact" class="svc-link">Get a Hedge Quote →</a>
+        </div>
+      </div>
+
+      <div class="svc svc-4">
+        <div class="svc-img"></div>
+        <div class="svc-body">
+          <h3>Garden Maintenance</h3>
+          <p class="lead">Keep the whole yard cared for — not just the trees.</p>
+          <ul>
+            <li>Overgrowth, weeds &amp; invasive plant removal</li>
+            <li>Lawn and general tidy-ups</li>
+            <li>Plant-care advice tailored to what you're growing</li>
+          </ul>
+          <div class="svc-price">Priced per visit or on a maintenance plan — ask for a walkthrough.</div>
+          <a href="#contact" class="svc-link">Get a Garden Quote →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transparent estimate -->
+    <div class="estimate">
+      <h3>What Actually Determines Your Price</h3>
+      <p class="intro">We keep pricing honest and case-by-case. Instead of a flat rate that overcharges simple jobs and underprices complex ones, we assess the real factors:</p>
+      <div class="factors">
+        <div class="factor"><div class="fic">📏</div><b>Size &amp; Height</b><small>Taller, larger trees take more time, rigging, and care.</small></div>
+        <div class="factor"><div class="fic">🚧</div><b>Accessibility</b><small>Tight yards, buildings, wires, or fences add complexity.</small></div>
+        <div class="factor"><div class="fic">⚠️</div><b>Condition &amp; Risk</b><small>Dead, leaning, or storm-damaged trees need extra safety measures.</small></div>
+        <div class="factor"><div class="fic">🗑️</div><b>Debris &amp; Disposal</b><small>How much we haul away, and whether you want the stump gone.</small></div>
+        <div class="factor"><div class="fic">⏱️</div><b>Urgency</b><small>Emergency work is scheduled and priced differently from planned care.</small></div>
+      </div>
+      <div class="scopeflex"><b>Working to a budget?</b> Tell us. We'll prioritize the work that protects your property and your trees' health first — reducing scope where it makes sense, never cutting corners on safety or quality.</div>
+      <div class="estimate-cta"><a href="#contact" class="btn btn-outline">Get Your Free, No-Obligation Estimate</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREE HEALTH SIGNS ============ -->
+<section class="section signs" id="signs">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--leaf-bright)">Tree Health</p>
+      <h2>Is Your Tree Trying to Tell You Something?</h2>
+      <p>Trees usually warn you before they fail. If you notice any of these, it's worth a certified look — early advice is cheaper than an emergency.</p>
+    </div>
+    <div class="signs-grid">
+      <div class="sign"><div class="sic">🌲</div><b>Leaning suddenly?</b><p>A new lean can signal root or soil failure.</p></div>
+      <div class="sign"><div class="sic">🥀</div><b>Dead or hanging branches?</b><p>Deadwood can drop without warning over roofs and walkways.</p></div>
+      <div class="sign"><div class="sic">🪵</div><b>Cracks or peeling bark?</b><p>Structural or disease issues often show on the trunk first.</p></div>
+      <div class="sign"><div class="sic">🍄</div><b>Roots lifting or fungus at the base?</b><p>Signs the tree's stability may be compromised.</p></div>
+    </div>
+    <p class="signs-cta">Not sure? <a href="#contact">Send us a photo and we'll take a look →</a></p>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Reviews</p>
+      <h2>What Our Customers Say</h2>
+    </div>
+    <p class="agg"><span class="stars">★★★★★</span><br>Trusted by homeowners across Greater Vancouver</p>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p class="pull">"Professional advice without trying to upsell unnecessary work."</p>
+        <p class="quote">"Finding a reliable arborist is often harder than finding the tree itself. WingGrove provided professional, practical advice without trying to upsell. They explained what actually needed to be done and why, which gave me confidence. The work was completed exactly as scheduled — no surprises, no delays — the site was left tidy, and the whole process was straightforward from start to finish."</p>
+        <div class="tags"><span class="tag">Expert Advice</span><span class="tag">No Upselling</span><span class="tag">On Schedule</span></div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p class="pull">"Real value for the quality — and they left the yard spotless."</p>
+        <p class="quote">"Honestly, I can't recommend WingGrove enough. I shopped around and got a few quotes beforehand, and they offered real value for the quality. They did a fantastic job on everything we discussed during the walkthrough. The crew was down to earth, showed up exactly when they said they would, respected my property, and left the yard spotless. I'll definitely be calling them again."</p>
+        <div class="tags"><span class="tag">Fair &amp; Honest</span><span class="tag">Punctual</span><span class="tag">Property Respected</span></div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p class="pull">"Knowledgeable, responsive, and genuinely helpful advice."</p>
+        <p class="quote">"Highly recommend! They did an amazing job bringing my yard back to life — from trimming the hedges to removing weeds and overgrown plants, everything was done with care. They were responsive, knowledgeable, and gave me great advice on how to maintain my different plants. Saved me a lot of time and headaches!"</p>
+        <div class="tags"><span class="tag">Knowledgeable</span><span class="tag">Property Care</span><span class="tag">Responsive</span></div>
+      </div>
+    </div>
+    <div class="reviews-cta"><a href="https://share.google/xQVYKSGiafr37g81d" target="_blank" rel="noopener" class="btn btn-outline">Read More Reviews on Google ★</a></div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How It Works</p>
+      <h2>Simple, From First Call to Final Clean-Up</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Tell Us About Your Trees</h3>
+        <p>Call, message, or fill out the form — send a photo if you have one. It takes two minutes.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>We Assess &amp; Explain</h3>
+        <p>A certified arborist looks at your trees on-site, explains exactly what's needed and why, and gives you a clear, honest quote.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>We Do It Right — and Tidy Up</h3>
+        <p>Our crew arrives on schedule, does the work safely to standard, and leaves your property spotless.</p>
+      </div>
+    </div>
+    <p class="steps-close">That's it. No pressure, no mess, no guesswork.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--leaf-bright)">Get In Touch</p>
+      <h2>Ready to Give Your Trees the Care They Deserve?</h2>
+      <p class="sub">Get a free, no-obligation quote from a certified arborist. We'll take a look, explain your options clearly, and leave the decision to you.</p>
+      <div class="contact-info">
+        <div class="ci"><span class="cic">📞</span><div>Call or text<br><a href="tel:+16728664653">(672) 866-4653</a></div></div>
+        <div class="ci"><span class="cic">✉️</span><div>Email<br><a href="mailto:wing@winggrovetreecare.ca">wing@winggrovetreecare.ca</a></div></div>
+        <div class="ci"><span class="cic">📍</span><div>Service area<br>Greater Vancouver</div></div>
+      </div>
+      <div class="isa-contact">
+        <img src="images/isa-certified-arborist.png" alt="ISA Certified Arborist" onerror="this.outerHTML='&lt;div class=\'isa-fallback\'&gt;ISA CERT.&lt;/div&gt;'">
+        <span>ISA Certified Arborist</span>
+      </div>
+    </div>
+
+    <form class="quote" id="quoteForm">
+      <h3>Request Your Free Quote</h3>
+      <p class="fnote">We'll get back to you within one business day.</p>
+      <div class="row2">
+        <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
+        <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required></div>
+      </div>
+      <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="email" required></div>
+      <div class="field">
+        <label>Service needed</label>
+        <select name="service">
+          <option>Tree Pruning</option>
+          <option>Tree Removal</option>
+          <option>Hedge Trimming</option>
+          <option>Garden Maintenance</option>
+          <option>Not sure — please advise</option>
+        </select>
+      </div>
+      <div class="field"><label>Property address or neighbourhood</label><input type="text" name="address"></div>
+      <div class="field"><label>Tell us about your trees</label><textarea name="message" placeholder="e.g. A large cedar leaning toward the house that I'd like looked at..."></textarea></div>
+      <button type="submit" class="btn btn-primary">Get My Free Quote</button>
+      <p class="form-reply">Prefer to talk? Call or text <a href="tel:+16728664653" style="color:var(--forest);font-weight:700">(672) 866-4653</a>.</p>
+      <div class="form-success" id="formSuccess">Thanks! Your email app will open with your request ready to send. We'll reply within one business day.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#home" class="brand" style="color:#fff" aria-label="WingGrove Tree Care">
+          <img src="images/logo-white.png" alt="WingGrove Tree Care" class="brand-logo"
+               onerror="this.onerror=null;this.src='images/logo.png';this.classList.add('logo-fbk')">
+        </a>
+        <p>Certified, insured tree care for Greater Vancouver. Honest advice, safe work, and a spotless finish — every time.</p>
+        <div class="foot-cred">
+          <span>ISA Certified Arborist</span><span>Fully Insured</span><span>WorkSafeBC Compliant</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Tree Pruning</a>
+        <a href="#services">Tree Removal</a>
+        <a href="#services">Hedge Trimming</a>
+        <a href="#services">Garden Maintenance</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+16728664653">📞 (672) 866-4653</a>
+        <a href="mailto:wing@winggrovetreecare.ca">✉️ wing@winggrovetreecare.ca</a>
+        <p>📍 Greater Vancouver</p>
+        <a href="https://share.google/xQVYKSGiafr37g81d" target="_blank" rel="noopener">★ Google Reviews</a>
+      </div>
+      <div class="foot-col">
+        <h4>Certified</h4>
+        <div class="foot-isa">
+          <img src="images/isa-certified-arborist.png" alt="ISA Certified Arborist" onerror="this.outerHTML='&lt;div class=\'isa-fallback\'&gt;ISA&lt;/div&gt;'">
+          <span>ISA Certified<br>Arborist</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 WingGrove Tree Care. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  var hb = document.getElementById('hamburger');
+  var nl = document.getElementById('navLinks');
+  hb.addEventListener('click', function(){ nl.classList.toggle('open'); });
+  nl.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ nl.classList.remove('open'); }); });
+
+  // Quote form -> opens email with prefilled details (static-site friendly, no backend).
+  // To use a form service instead, set FORM_ENDPOINT below to your Formspree/Getform URL.
+  var FORM_ENDPOINT = ""; // e.g. "https://formspree.io/f/xxxxxx"
+  var form = document.getElementById('quoteForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var d = new FormData(form);
+    if (FORM_ENDPOINT) {
+      fetch(FORM_ENDPOINT, {method:'POST', body:d, headers:{'Accept':'application/json'}})
+        .then(function(){ document.getElementById('formSuccess').style.display='block'; form.reset(); });
+      return;
+    }
+    var subject = 'Quote request — ' + (d.get('service')||'Tree service') + ' — ' + (d.get('name')||'');
+    var body =
+      'Name: ' + (d.get('name')||'') + '\n' +
+      'Phone: ' + (d.get('phone')||'') + '\n' +
+      'Email: ' + (d.get('email')||'') + '\n' +
+      'Service: ' + (d.get('service')||'') + '\n' +
+      'Address / area: ' + (d.get('address')||'') + '\n\n' +
+      'Details:\n' + (d.get('message')||'');
+    document.getElementById('formSuccess').style.display='block';
+    window.location.href = 'mailto:wing@winggrovetreecare.ca?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
